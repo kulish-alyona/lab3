@@ -4,6 +4,8 @@ const select = document.getElementById('selectProp');
 const btn = document.getElementById("btn");
 const result = document.getElementById("result");
 
+
+
 btn.addEventListener('click', () => {
     if (!a.value || !b.value) {
         alert("Fill the Fields!")
@@ -20,17 +22,13 @@ btn.addEventListener('click', () => {
 
         if (select.value === "*")  {
             const sum = Number(a.value) * Number(b.value);
-            result.innerHTML = sum;
+            result.innerHTML = sum.toFixed(2);
         }
 
         if (select.value === "/")  {
             const sum = Number(a.value) / Number(b.value);
-            result.innerHTML = sum;
+            result.innerHTML = sum.toFixed(2);
         }
 
-        if(Number(a.value) === 0) {
-            alert("Нельзя делить на ноль!");
-            result.innerHTML = ""
-        }
     }
 })
